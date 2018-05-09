@@ -1,0 +1,59 @@
+*:hover, *:focus{
+	transition-duration: 0.5s;
+}
+
+.body{
+	font-family: 'Open Sans', sans-serif;
+}
+.brand{
+	margin: -.8rem -1rem;
+    padding: .8rem 1rem;
+	font-family: 'Titillium Web', sans-serif;
+}
+.brand:hover{
+	background-color: #da6a04;
+}
+
+.nav-item{
+	margin: 0 5px;
+}
+
+.nav-item:hover, .nav-item.active{
+	border-bottom: 2px solid #fff;\
+}
+
+.search{
+	border: 0;
+	border-radius: 0;
+	border-bottom: 2px solid #8725f7;
+	background-color: transparent;
+	color: #fff;
+}
+
+.search:focus{
+	background-color: transparent;
+	border-color: #fff;
+	/*border: 0;*/
+}
+
+.form-control:focus{
+	/*border: 0 !important;*/
+	color: #fff;
+	box-shadow: none;
+}
+
+.input-suffix{
+	margin-left: -2rem;
+}
+
+button.input-suffix{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.form-inline .search {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
