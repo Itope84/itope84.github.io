@@ -9,6 +9,9 @@
 	<!-- of course I need font awesome -->
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+	<!-- other external libraries -->
+	<link rel="stylesheet" href="css/animate.css">
+
 	<!-- my own styles -->
 	<link rel="stylesheet" href="css/colors.css">
 	<link rel="stylesheet" href="css/landing.css">
@@ -45,13 +48,12 @@
             </div>
           </li>
         </ul>
-        <form class="form-inline my-2 my-md-0" method="get">
+        <!-- The search, for later -->
+        <!-- <form class="form-inline my-2 my-md-0" method="get">
         	
         		<input class="form-control search" type="text" placeholder="Search">
         		<button type="submit" class="input-group-addon input-suffix text-white"><i class="fa fa-search"></i></button>
-        	
-        	
-        </form>
+        </form> -->
       </div>
     </nav>
 
@@ -59,23 +61,52 @@
 	<header class="header align-content-end">
 		<div class="overlay-black"></div>
 		<div class="container">
-			<div class="description text-white">
+			<div class="description text-white wow fadeInUp">
 				<h3>
 					Hello, Thanks for stopping by!
 				</h3>
 			    <p>
 				    I'm Santiago, more about me below. Welcome to my portfolio page. Keep scrolling down to see some of my works. If you see anything you like, don't foget to hit me up :-). 
 				</p>
-			    <button class="btn btn-outline-secondary">See more</button>
+			    <button class="btn btn-outline-secondary hover-bg-secondary">See more</button>
 			   
+			</div>
+			<div class="ml-auto col-md-5 logo-icon d-flex align-items-center justify-content-center">
+				<img src="images/logo-icon.png" class="ml-auto d-none d-md-block">
 			</div>
 		</div>
 	</header>
+
+	<main class="container">
+		<div class="row mt-4">
+			<h2 class="text-color-main text-center w-100">About Me</h2>
+			<div class="col-12 col-md-4 d-flex justify-content-center align-items-center border-right-2 border-main">
+				<img src="images/santiago.jpg" class="rounded-circle profile-picture border-secondary wow bounceInLeft"  data-wow-duration="2s">
+			</div>
+			<div class="col-12 col-md-8 about-text">
+				<h3 class="text-color-secondary">Ilesanmi Temitope (<span class="text-color-main">Santiago</span>)</h3>
+				<p>
+					Well, let's see... I'm a 400L student of Physics Education at Obafemi Awolowo University. I love Math, Physics and Programming. - <i>Really, nothing asides those 3... Oh! I forgot scifi; well, theres superhero movies too :-).</i><br>
+					<b>My Resume</b><br>
+					- I currently intern at HNGInternship4.0<br>
+					- Enrolled in the Mobile Web Specialist track of the Google Africa Scholarship. <br>
+					- Recently took on a challenge to do several crazy things before the year runs out<br>
+					- I don't know what else to put here :-)
+				</p>
+				<p>Okay, so I built this page as the starting point for my 10 apps in 10 weeks project.<br> 
+				<a href="#" class="ml-auto mt-1 btn btn-outline-secondary hover-bg-secondary">Read the article here</a> </p>
+			</div>
+		</div>
+	</main>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
+<script src="js/wow.js"></script>
+<script>
+new WOW().init();
+</script>
 </body>
 </html>

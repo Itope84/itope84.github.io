@@ -7,3 +7,27 @@
 .bg-tertiary{
 	background-color: #25f7e5;
 }
+
+.text-color-main{
+	color: #f78a25;
+}
+.text-color-secondary{
+	color: #8725f7;
+}
+.text-color-tertiary{
+	color: #25f7e5;
+}
+
+.border-main{
+	border-color: #f78a25 !important;
+}
+.border-secondary{
+	border-color: #8725f7 !important;
+}
+.border-tertiary{
+	border-color: #25f7e5 !important;
+}
+
+.hover-bg-secondary:hover{
+	background-color: #8725f7 !important;
+}
