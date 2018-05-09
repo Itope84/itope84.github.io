@@ -57,3 +57,43 @@ button.input-suffix{
     width: auto;
     vertical-align: middle;
 }
+
+.header{
+	/*give it most of the viewport height*/
+	height: 95vh; 
+	background-image: url('../images/banner.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	
+}
+
+.overlay-black{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.21);
+	min-width: 100%;
+	min-height: 95vh;
+}
+
+.description{
+    position: absolute;
+    bottom: 10vh;
+    margin: auto;
+    padding: 2em;
+    font-family: 'Muli' , sans-serif;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.description p{
+ /*color:#666;*/
+ font-size: 1.0rem;
+ max-width: 500px;
+ line-height: 1.5;
+}
+.description button{
+ border:1px  solid #F97300;
+ background:#F97300;
+ color:#fff;
+}
