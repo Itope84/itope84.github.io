@@ -20,33 +20,38 @@
 	<link href="https://fonts.googleapis.com/css?family=Muli|Open+Sans|Titillium+Web" rel="stylesheet">
 
 </head>
-<body>
+<body data-spy="scroll" data-target="#navigation">
 
 	<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-main">
-      <a class="navbar-brand brand" href="#">Santiago's Portfolio</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand brand" href="#"><img src="images/logo-white.png" alt="Santiago's Portfolio"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbarsExample04">
+      <div class="collapse navbar-collapse justify-content-end" id="navigation">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="#header">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#about">About Me</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link" href="#portfolio">Portfolio</a>
           </li>
+
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Challenges</a>
             <div class="dropdown-menu" aria-labelledby="dropdown04">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#tenApps">10 Apps in 10 weeks</a>
             </div>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          
         </ul>
         <!-- The search, for later -->
         <!-- <form class="form-inline my-2 my-md-0" method="get">
@@ -58,7 +63,7 @@
     </nav>
 
 	<!-- The header section -->
-	<header class="header align-content-end">
+	<header class="header align-content-end" id="header">
 		<div class="overlay-black"></div>
 		<div class="container">
 			<div class="description text-white wow fadeInUp">
@@ -72,39 +77,238 @@
 			   
 			</div>
 			<div class="ml-auto col-md-5 logo-icon d-flex align-items-center justify-content-center">
-				<img src="images/logo-icon.png" class="ml-auto d-none d-md-block">
+				<img src="images/logo-icon.png" alt="Logo Icon" class="ml-auto d-none d-md-block">
 			</div>
 		</div>
 	</header>
 
 	<main class="container">
-		<div class="row mt-4">
-			<h2 class="text-color-main text-center w-100">About Me</h2>
+		<h2 class="text-color-main text-center w-100 mt-4">About Me</h2>
+			<hr class="section-header">
+		<div class="row mt-4" id="about">
+			
 			<div class="col-12 col-md-4 d-flex justify-content-center align-items-center border-right-2 border-main">
-				<img src="images/santiago.jpg" class="rounded-circle profile-picture border-secondary wow bounceInLeft"  data-wow-duration="2s">
+				<img src="images/santiago.jpg" alt="Santiago" class="rounded-circle profile-picture border-secondary wow bounceInLeft"  data-wow-duration="2s">
 			</div>
 			<div class="col-12 col-md-8 about-text">
-				<h3 class="text-color-secondary">Ilesanmi Temitope (<span class="text-color-main">Santiago</span>)</h3>
-				<p>
+				<h3 class="text-color-secondary wow fadeIn">Ilesanmi Temitope (<span class="text-color-main">Santiago</span>)</h3>
+				<p class="wow fadeIn">
 					Well, let's see... I'm a 400L student of Physics Education at Obafemi Awolowo University. I love Math, Physics and Programming. - <i>Really, nothing asides those 3... Oh! I forgot scifi; well, theres superhero movies too :-).</i><br>
-					<b>My Resume</b><br>
-					- I currently intern at HNGInternship4.0<br>
-					- Enrolled in the Mobile Web Specialist track of the Google Africa Scholarship. <br>
-					- Recently took on a challenge to do several crazy things before the year runs out<br>
-					- I don't know what else to put here :-)
 				</p>
-				<p>Okay, so I built this page as the starting point for my 10 apps in 10 weeks project.<br> 
-				<a href="#" class="ml-auto mt-1 btn btn-outline-secondary hover-bg-secondary">Read the article here</a> </p>
+				<div class="card wow fadeIn">
+					<ul class="list-group">
+					<li class="list-group-item card-header text-center"><b>My Resume</b></li>
+					<li class="list-group-item"> I currently intern at HNGInternship4.0</li>
+					<li class="list-group-item"> Enrolled in the Mobile Web Specialist track of the Google Africa Scholarship.</li>
+					<li class="list-group-item"> Recently took on a challenge to do several crazy things before the year runs out</li>
+					<li class="list-group-item"> I don't know what else to put here :-)</li>
+					<li class="list-group-item">I built this page as the starting point for my <b><em>10 apps in 10 weeks project.</em></b>
+						<br> 
+						<a href="#" class="ml-auto mt-1 btn btn-hover-secondary hover-bg-secondary">Read the article here</a>
+					</li>
+					</ul>
+				</div>
+				
 			</div>
 		</div>
+
+		<!-- My projects Section -->
+		<section id="portfolio" class="my-4">
+			<h2 class="text-color-main text-center w-100">My Projects</h2>
+			<hr class=" section-header">
+
+			<p class="text-muted text-center">
+				Well, I don't have much in the way of completed projects. But check out links to some of them below.
+			</p>
+
+			<div class="my-4 row">
+				<div class="col-12 col-sm-6 col-md-4 col-xl-3">
+					<div class="card wow slideInUp">
+						<div class="card-img" style="max-height: 200px; overflow-y: hidden;">
+							<a href="http://thenumericals.com"><img src="images/thenumericals.png" alt="the numericals" style="width: 100%;"></a>
+						</div>
+						<div class="card-body">
+							<h4 class="card-text text-center text-color-main">The Numericals</h4>
+							<hr class="w-50 ml-auto mr-auto">
+							<p class="card-text text-muted text-center">An E-commerce platform, where buyers meet sellers...</p>
+							<hr class="w-50 ml-auto mr-auto">
+							<p class="text-center">
+								Category: Freelance projects
+								<a href="http://thenumericals.com" class="btn btn-outline-secondary mt-2">Visit Site</a>
+							</p>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-4 col-xl-3">
+					<div class="card wow slideInUp">
+						<div class="card-img" style="max-height: 200px; overflow-y: hidden;">
+							<a href="http://designcamp17.com.ng"><img src="images/designcamp17.png" style="width: 100%;"></a>
+						</div>
+						<div class="card-body">
+							<h4 class="card-text text-center text-color-main">DesignCamp17</h4>
+							<hr class="w-50 ml-auto mr-auto">
+							<p class="card-text text-muted text-center">Registration and Information website for a bootcamp</p>
+							<hr class="w-50 ml-auto mr-auto">
+							<p class="text-center">
+								Category: Freelance/personal
+								<a href="http://designcamp17.com.ng" class="btn btn-outline-secondary mt-2">Visit Site</a>
+							</p>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-4 col-xl-3">
+					<div class="card wow slideInUp">
+						<div class="card-img" style="max-height: 200px; overflow-y: hidden;">
+							<a href="http://designcamp17.com.ng"><img src="images/greatifepharm.png" style="width: 100%;"></a>
+						</div>
+						<div class="card-body">
+							<h4 class="card-text text-center text-color-main">Great Ife Pharmacy</h4>
+							<hr class="w-50 ml-auto mr-auto">
+							<p class="card-text text-muted text-center">Registration for faculty of pharmacy Alumni Reunion</p>
+							<hr class="w-50 ml-auto mr-auto">
+							<p class="text-center">
+								Category: Freelance projects
+								<a href="http://designcamp17.com.ng" class="btn btn-outline-secondary mt-2">Visit Site</a>
+							</p>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-4 col-xl-3">
+					<div class="card wow slideInUp">
+						<div class="card-img" style="max-height: 200px; overflow-y: hidden;">
+							<a href="http://designcamp17.com.ng"><img src="images/designcamp17.png" style="width: 100%;"></a>
+						</div>
+						<div class="card-body">
+							<h4 class="card-text text-center text-color-main">Santiago's Portfolio</h4>
+							<hr class="w-50 ml-auto mr-auto">
+							<p class="card-text text-muted text-center">Come On! That's this page</p>
+							<hr class="w-50 ml-auto mr-auto">
+							<p class="text-center">
+								Category: Freelance/personal
+								<a href="http://designcamp17.com.ng" class="btn btn-outline-secondary mt-2">Visit Site</a>
+							</p>
+							
+						</div>
+					</div>
+				</div>
+
+				
+
+			</div>
+
+
+			<div class="row">
+				<div class="col-12 alert alert-info">
+
+					<p class="text-center text-muted">There have been other small projects, which I'll mention in the future; but I'm really just tired right now... Plus, hey, these were the only ones that brought me... whatever.</p>
+				</div>
+				
+			</div>
+		</section>
+
+		<!-- 10 apps in 10 weeks -->
+
+		<section id="tenApps" class="my-4">
+			<h2 class="text-color-main text-center w-100">Challenge: 10 Apps in 10 weeks</h2>
+			<hr class=" section-header">
+
+			<p class="text-muted text-center">
+				This section will contain my apps from the 10 apps in 10 weeks challenge. There will be other challenges and I plan to add them later
+			</p>
+
+			
+		</section>
+
+		<section id="contact" class="my-4">
+			<h2 class="text-color-main text-center w-100">Contact Me</h2>
+			<hr class=" section-header">
+
+			<p class="text-muted text-center">
+				You weren't thinking of leaving without saying hi, were you?
+			</p>
+
+			<div class="row">
+				<div class="col-md-5">
+					<div class="card">
+						<h4 class="card-header">Contact Details:</h4>
+						<ul class="list-group rounded-0">
+							<li class="list-group-item">
+								<span class="fa fa-phone mr-2"></span> 09034971989
+							</li>
+							<li class="list-group-item">
+								<span class="fa fa-envelope-o mr-2"></span> topephysics@gmail.com
+							</li>
+							<li class="list-group-item">
+								<span class="fa fa-envelope-o mr-2"></span> santiago@designcamp17.com.ng
+							</li>
+							<li class="list-group-item">
+								<span class="fa fa-instagram mr-2"></span> @itope84
+							</li>
+							<li class="list-group-item">
+								<span class="fa fa-medium mr-2"></span> @psicliffs
+							</li>
+							<li class="list-group-item font-weight-bold" style="font-size: 25px;">
+								<div class="row text-center">
+									<div class="col-4">
+										<a href="https://twitter.com/aidansantiago97">
+										<span class="fa fa-twitter social-icon"></span>
+										</a>
+									</div>
+									<div class="col-4">
+										<a href="https://www.facebook.com/hellesanmi.santiago">
+										<span class="fa fa-facebook social-icon"></span>
+										</a>
+									</div>
+									<div class="col-4">
+										<a href="https://github.com/Itope84">
+										<span class="fa fa-github social-icon"></span>
+										</a>
+									</div>
+									
+								</div>
+								
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-7">
+					<blockquote>Well, I was going to put a contact form here, but since this is simply a frontend task... Let's just put some emojis shal we?</blockquote>
+				</div>
+			</div>
+
+			
+		</section>
+
+		
 	</main>
 
+	<footer class="container-fluid bg-footer">
+			<div class="col-12 py-3 text-center text-white">
+				Copyright &copy; 2018, Ilesanmi Temitope (Santiago)<br>
+				<i>I've always wanted to say that</i>
+			</div>
+	</footer>
+
+	
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
+<script src="js/smooth-scroll.min.js"></script>
 <script src="js/wow.js"></script>
+<script src="js/main.js"></script>
+
+<!-- init smooth scroll -->
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+
 <script>
 new WOW().init();
 </script>
