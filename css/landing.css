@@ -1,13 +1,26 @@
+
+
 *:hover, *:focus{
-	transition-duration: 0.5s;
+	-webkit-transition: all .3s ease;
+    transition: all .5s ease;
 }
 
+a{
+	text-decoration: none !important;
+}
+
+/*
+*:hover, *:focus{
+	transition-duration: 0.5s;
+}*/
+
 .body{
+	position: relative;
 	font-family: 'Open Sans', sans-serif;
 }
 .brand{
-	margin: -.8rem -1rem;
-    padding: .8rem 1rem;
+	margin: -.5rem -1rem;
+    padding: .5rem 1rem;
 	font-family: 'Titillium Web', sans-serif;
 }
 .brand:hover{
@@ -18,8 +31,13 @@
 	margin: 0 5px;
 }
 
-.nav-item:hover, .nav-item.active{
-	border-bottom: 2px solid #fff;\
+.nav-item:hover{
+	border-bottom: 2px solid #fff;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #fff;
+    border-bottom: 2px solid #fff;
 }
 
 .search{
@@ -117,8 +135,60 @@ button.input-suffix{
 	padding: 2rem;
 }
 
+hr.section-header{
+	background-color: #f78a25;
+	padding: 1px;
+	display: block;
+	width: 80px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.card{
+	-webkit-box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
+	box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
+    border-radius: .375rem;
+    margin-bottom: 10px;
+}
+.card:hover{
+	-webkit-box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2);
+    box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2);
+}
+
+
+
+.social-icon{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #8725f7;
+	color: #8725f7;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+}
+
+.social-icon:hover{
+	background-color: #8725f7;
+	color: #fff;
+}
+
+blockquote{
+	margin: 20px;
+	border-left: 3px solid #8725f7;
+	padding: 1rem;
+	color: #8725f7;
+	background-color: rgba(228, 212, 197, 0.45);
+}
+
+/*media queries*/
 @media(max-width: 760px){
 	.border-right-2{
 		border-right: 0;
 	}
 }
+
+

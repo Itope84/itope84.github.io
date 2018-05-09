@@ -1,7 +1,7 @@
 .bg-main{
 	background-color: #f78a25;
 }
-.bg-secondary{
+.bg-second{
 	background-color: #8725f7;
 }
 .bg-tertiary{
@@ -30,4 +30,28 @@
 
 .hover-bg-secondary:hover{
 	background-color: #8725f7 !important;
+	color: #fff;
+	border-color: #8725f7;
+}
+
+.btn-hover-main{
+	background-color: transparent;
+	color: #f78a25;
+	border: 1px solid #f78a25;
+}
+
+.btn-hover-secondary{
+	background-color: transparent;
+	color: #8725f7;
+	border: 1px solid #8725f7;
+}
+
+.btn-hover-secondary:hover{
+	background-color: #8725f7 !important;
+	color: #fff;
+	border-color: #8725f7;
+}
+
+.bg-footer{
+	background-color: #493265;
 }
