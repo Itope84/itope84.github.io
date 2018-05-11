@@ -103,3 +103,24 @@ a{
 /*.note-body{
 	word-wrap: 
 }*/
+
+.notes-toggler{
+	position: absolute;
+}
+
+.notes-sidebar{
+	position: fixed;
+    background-color: #fff;
+    z-index: 20;
+    width: 80% !important;
+    max-width: 350px;
+    left: 0;
+    overflow-y: scroll;
+}
+
+#closeSidebar{
+	position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5rem
+}
