@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	var height = $("#rightBody").height();
+	$("#appBody").css('height', height);
 	$("#openSidebar").click(function(){
 		var top = $("#navbar").height() + 10;
 		var height = $(window).height() - top;
