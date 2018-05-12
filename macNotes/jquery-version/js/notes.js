@@ -53,6 +53,7 @@ function add(note){
 					    + '</a>');
 }
 
+//display note
 function show(note){
 	$("#displayDate").html(formatTimestamp(note.timestamp));
 	$("#noteText").html(note.body);
