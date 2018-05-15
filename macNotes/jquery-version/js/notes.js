@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 	$("#addNote").click(function(){
 		
-		add(notes[2]);
+		newNote();
 
 	});
 
@@ -33,11 +33,45 @@ $(document).ready(function(){
 		add(note);
 	});
 
+	show(notes[0]);
+
 	$(".note-list-item").click(function(event){
 		var id =  $(this).attr('id');
 		// get the corresponsing note
 		var noteId = id.split("_")[1];
 		show(notes[noteId]);
+	});
+
+	$("#editNote").click(function(event){
+		// get id of active note
+		var id = $(".active.note-list-item").attr('id');
+		var noteId = id.split("_")[1];
+		edit(notes[noteId]);
+		
+	});
+
+	$("#closeEdit").click(function(){
+		// get id of active note
+		var id = $(".active.note-list-item").attr('id');
+		var noteId = id.split("_")[1];
+		closeEdit(notes[noteId]);
+	});
+
+	$("#saveNote").click(function(e){
+		e.preventDefault();
+		// get id of active note
+		var id = $(".active.note-list-item").attr('id');
+		var noteId = id.split("_")[1];
+		var text = $("#textArea").val();
+		saveNote(notes[noteId], text);
+	});
+
+	$("#deleteNote").click(function(e){
+		// get id of active note
+		var id = $(".active.note-list-item").attr('id');
+		var noteId = id.split("_")[1];
+		deleteNote(notes[noteId]);
+		// find the next note to show
 	})
 
 });
@@ -53,10 +87,64 @@ function add(note){
 					    + '</a>');
 }
 
+function newNote(){
+	$(".active.note-list-item").removeClass('active');
+	// last id
+	var lastId = notes.length - 1;
+	var newNote = {id: ++lastId, body: "New Note", timestamp: Date.now()}
+	notes.push(newNote);
+	add(newNote);
+	show(newNote);
+}
+
 //display note
 function show(note){
+	$(".active.note-list-item").removeClass('active');
 	$("#displayDate").html(formatTimestamp(note.timestamp));
 	$("#noteText").html(note.body);
+	// set note as active
+	var noteId = '#note_'+note.id;
+	$(noteId).addClass('active');
+}
+
+function edit(note){
+	$("#noteText").hide();
+	$("#editNoteForm").show();
+	$("#textArea").html(note.body);
+	$("#editNote").hide();
+	$("#closeEdit").show();
+}
+
+function closeEdit(note){
+	$("#editNoteForm").hide();
+	$("#noteText").show();
+	show(note);
+	$("#closeEdit").hide();
+	$("#editNote").show();
+}
+
+function saveNote(note, text){
+	note.body = text;
+	// the sidebar
+	deleteNote(note);
+	add(note);
+	closeEdit(note);
+}
+
+function deleteNote(note){
+	notes[note.id] = null;
+	var noteId = '#note_'+note.id;
+	$(noteId).remove();
+	var x = notes[note.id + 1];
+	var y = notes[note.id - 1];
+	if (x !== undefined && x!=null){
+		show(x);
+	}
+	else if(y !== undefined && y!= null){
+		show(y);
+	} else{
+		$("#noteText").html("nothing to show");
+	}
 }
 
 

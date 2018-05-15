@@ -85,27 +85,35 @@
 			<div class="col-12 col-md-7 ml-auto mr-auto note" id="rightBody">
 
 				<div class="row px-3 py-3 justify-content-between">
-					<button class="btn btn-secondary" id="addNote"><span class="fa fa-plus"></span></button>
-					<h5 class="note-header-date mt-1" id="displayDate">Saturday, January 5</h5>
-					<button class="btn btn-secondary" id="deleteNote"><span class="fa fa-trash-o"></span></button>
+					<div class="col-3 d-flex justify-content-around">
+						<button class="btn btn-secondary mr-1" id="addNote"><span class="fa fa-plus"></span></button>
+						<button class="btn btn-secondary" id="editNote"><span class="fa fa-edit"></span></button>
+						<button class="btn btn-secondary" id="closeEdit" style="display: none;"><span class="fa fa-times"></span></button>
+					</div>
+					
+					<h6 class="col-6 note-header-date mt-1 text-center" id="displayDate">Saturday, January 5</h6>
+					<div class="col-2">
+						<button class="btn btn-secondary" id="deleteNote"><span class="fa fa-trash-o"></span></button>
+					</div>
+					
 				</div>
 				<div class="note-body" id="noteBody">
 					<p class="note-text" id="noteText">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						<br>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id 
+
+						
 
 					</p>
+
+					<form id="editNoteForm" style="display: none;">
+						<div class="form-group">
+							<textarea class="form-control" rows="6" id="textArea">Demo Text Here</textarea>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-secondary float-right" id="saveNote">SAVE</button>
+						</div>
+					</form>
+
+					
 				</div>
 			</div>
 		</div>
