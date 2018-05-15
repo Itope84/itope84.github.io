@@ -72,8 +72,36 @@ $(document).ready(function(){
 		var noteId = id.split("_")[1];
 		deleteNote(notes[noteId]);
 		// find the next note to show
-	})
+	});
 
+	// what if I'm searching
+
+	$("#searchNote").on('input propertychange', function(){
+		var searchText = $(this).val();
+		$('.note-list-item').each(function(){
+			var note = $(this);
+			var id = note.attr('id');
+			var noteId = id.split("_")[1];
+			if(notes[noteId].body.toLowerCase().indexOf(searchText.toLowerCase())===-1){
+				note.hide();
+				if (note.hasClass('active')) {
+					note.removeClass('active');
+				}
+
+			}
+			else{
+				note.show();
+			}
+		});
+	//get the first visible note to show
+	var visisbleNotes = $('.note-list-item:visible');
+	if (visisbleNotes.length > 0) {
+		var selectedNote = $(visisbleNotes[0]);
+		var noteId = selectedNote.attr('id').split("_")[1];
+		show(notes[noteId]);
+	}
+	
+	});
 });
 
 
@@ -146,7 +174,6 @@ function deleteNote(note){
 		$("#noteText").html("nothing to show");
 	}
 }
-
 
 function formatTimestamp(timestamp){
 	return new Date(timestamp).toUTCString();
