@@ -73,10 +73,7 @@
 						
 					</li>
 
-					<div class="note-list" id="noteList">
-						
-						
-					</div>
+					<div class="note-list" id="noteList"></div>
 					
 				</ul>
 
@@ -86,13 +83,25 @@
 
 				<div class="row px-3 py-3 justify-content-between">
 					<button class="btn btn-secondary" id="addNote"><span class="fa fa-plus"></span></button>
+					<button class="btn btn-secondary" id="editNote"><span class="fa fa-edit"></span></button>
+					<button class="btn btn-secondary" id="closeEdit" style="display: none;"><span class="fa fa-times"></span></button>
 					<h5 class="note-header-date mt-1" id="displayDate">Saturday, January 5</h5>
-					<button class="btn btn-secondary"><span class="fa fa-trash-o"></span></button>
+					<button class="btn btn-secondary" id="deleteNote"><span class="fa fa-trash-o"></span></button>
 				</div>
 				<div class="note-body" id="noteBody">
 					<p class="note-text" id="noteText">
 
 					</p>
+
+					<form id="editNoteForm" style="display: none;">
+						<div class="form-group">
+							<textarea class="form-control" rows="6" id="textArea">Demo Text Here</textarea>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-secondary float-right" id="saveNote">SAVE</button>
+						</div>
+					</form>
+
 				</div>
 			</div>
 		</div>

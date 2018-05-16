@@ -5,7 +5,7 @@ var notes = [
 ];
 
 
-$(document).ready(function(){
+// $(document).ready(function(){
 	var height = $("#rightBody").height() + 50;
 	$("#appBody").css('height', height+'px');
 	$("#openSidebar").click(function(){
@@ -42,21 +42,7 @@ $(document).ready(function(){
 		show(notes[noteId]);
 	});
 
-	$("#editNote").click(function(event){
-		// get id of active note
-		var id = $(".active.note-list-item").attr('id');
-		var noteId = id.split("_")[1];
-		edit(notes[noteId]);
-		
-	});
-
-	$("#closeEdit").click(function(){
-		// get id of active note
-		var id = $(".active.note-list-item").attr('id');
-		var noteId = id.split("_")[1];
-		closeEdit(notes[noteId]);
-	});
-
+	
 	$("#saveNote").click(function(e){
 		e.preventDefault();
 		// get id of active note
@@ -100,9 +86,25 @@ $(document).ready(function(){
 		var noteId = selectedNote.attr('id').split("_")[1];
 		show(notes[noteId]);
 	}
-	
+
 	});
-});
+
+	$("#editNote").click(function(event){
+		// get id of active note
+		var id = $(".active.note-list-item").attr('id');
+		var noteId = id.split("_")[1];
+		edit(notes[noteId]);
+		
+	});
+
+	$("#closeEdit").click(function(){
+		// get id of active note
+		var id = $(".active.note-list-item").attr('id');
+		var noteId = id.split("_")[1];
+		closeEdit(notes[noteId]);
+	});
+
+// });
 
 
 // let's create some functions shall we?

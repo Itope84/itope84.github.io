@@ -156,3 +156,10 @@ a{
 	border-radius: 4px;
 	background-color: #ccc;
 }
+
+
+.list-group-item p{
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
