@@ -59,7 +59,8 @@ var notes = [
 	});
 
 	// save note
-	document.getElementById('saveNote').addEventListener('click', function(){
+	document.getElementById('saveNote').addEventListener('click', function(e){
+		e.preventDefault();
 		saveNote(document.getElementsByClassName("active note-list-item")[0].data, document.getElementById('textArea').value);
 	});
 
