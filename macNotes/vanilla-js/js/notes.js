@@ -183,6 +183,9 @@ var notes = [
 		// set note as active
 		var noteId = 'note_'+note.id;
 		document.getElementById(noteId).classList.add('active');
+		// close sidebar
+		addClasses('noteSidebar', 'd-none');
+		removeClasses('noteSidebar', 'notes-sidebar', 'anomated', 'bounceInLeft');
 	}
 
 	function insertNote(note){
