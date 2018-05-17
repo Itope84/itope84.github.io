@@ -40,6 +40,7 @@ var notes = [
 	// when i click plus
 	document.getElementById('addNote').addEventListener('click', function(){
 		newNote();
+		editNote(document.getElementsByClassName("active note-list-item")[0].data);
 	});
 
 	// edit note
