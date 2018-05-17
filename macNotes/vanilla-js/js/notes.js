@@ -62,6 +62,39 @@ var notes = [
 		saveNote(document.getElementsByClassName("active note-list-item")[0].data, document.getElementById('textArea').value);
 	});
 
+	// finally, let's search
+	document.getElementById("searchNote").addEventListener('input', function(){
+		var searchText = this.value;
+		var sidebarNotes = document.getElementsByClassName('note-list-item');
+		var visibleNotes = sidebarNotes;
+		for(var i =0; i<sidebarNotes.length; i++){
+			
+				var note = sidebarNotes[i];
+				if(note.data.body.toLowerCase().indexOf(searchText.toLowerCase())===-1){
+					note.style.display = 'none';
+					if (note.classList.contains('active')) {
+						note.classList.remove('active');
+					}
+
+				}
+				else{
+					note.style.display = 'inherit';
+				}
+
+				if (visibleNotes[i].style.display == 'none') {
+					visibleNotes[i] = null;
+				}
+		} 
+		
+	visibleNotes = resetVN(visibleNotes);
+	//get the first visible note to show
+	if (visibleNotes.length > 0) {
+		var selectedNote = visibleNotes[0];
+		showNote(selectedNote.data);
+	}
+
+	});
+
 
 
 	//show a note when i click on it.
@@ -79,17 +112,17 @@ var notes = [
 
 	function editNote(note){
 		document.getElementById("noteText").style.display = "none";
-		document.getElementById("editNoteForm").style.display = "unset";
+		document.getElementById("editNoteForm").style.display = "inherit";
 		document.getElementById("textArea").innerHTML = note.body;
 		document.getElementById("editNote").style.display = 'none';
-		document.getElementById("closeEdit").style.display = "unset";
+		document.getElementById("closeEdit").style.display = "inherit";
 	}
 
 	function closeEdit(){
 		document.getElementById("editNoteForm").style.display = 'none';
-		document.getElementById("noteText").style.display = 'unset';
+		document.getElementById("noteText").style.display = 'inherit';
 		document.getElementById("closeEdit").style.display = 'none';
-		document.getElementById("editNote").style.display = 'unset';
+		document.getElementById("editNote").style.display = 'inherit';
 	}
 
 	function saveNote(note, text){
@@ -191,4 +224,15 @@ var notes = [
 		for (var i = classes.length - 1; i >= 0; i--) {
 			element.classList.remove(classes[i]);
 		}
+	}
+
+	// use this to clean up arrays
+	function resetVN(a){
+		var z =Array.prototype.slice.call(a);
+		var x = z.indexOf(null);
+		if (x!==-1) {
+			a.splice(x, 1);
+			resetVN(a);
+		}
+		return a;
 	}
